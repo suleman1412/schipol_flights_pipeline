@@ -16,3 +16,5 @@ The pipeline is designed to be modular and customizable. You can easily extend o
 
 4. **Visualization**: Visualize the insights using built-in visualization tools or integrate with external libraries.
 
+### Flowchart
+<img src="https://github.com/suleman1412/schipol_flights_pipeline/blob/main/etl_flowchart.png" alt="Alt Text" height="900">
