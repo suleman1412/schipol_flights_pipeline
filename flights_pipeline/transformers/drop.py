@@ -6,9 +6,13 @@ if 'test' not in globals():
 
 @transformer
 def transform(data, *args, **kwargs):
-    ext_data = data[['lastupdatedat', 'flightdirection','flightname','id','mainflight',
-                'scheduledatetime', 'scheduledate', 'servicetype', 'publicflightstate_flightstates',
-                'route_destinations','aircrafttype_iatasub']]
+    ext_data = data[[
+        'lastupdatedat', 'flightdirection','flightname','id',
+        'mainflight', 'scheduledate',
+        'scheduletime',
+        'servicetype', 
+        'publicflightstate_flightstates',
+        'route_destinations','aircrafttype_iatasub']]
     # print(ext_data.info())
     return ext_data
     
