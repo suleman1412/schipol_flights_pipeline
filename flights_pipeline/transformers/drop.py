@@ -6,6 +6,11 @@ if 'test' not in globals():
 
 @transformer
 def transform(data, *args, **kwargs):
-    # print(data.isna().sum)
-    data.dropna(how='any',axis=1,inplace=True)
-    return data
+    ext_data = data[['lastupdatedat', 'flightdirection','flightname','id','mainflight',
+                'scheduledatetime', 'scheduledate', 'servicetype', 'publicflightstate_flightstates',
+                'route_destinations','aircrafttype_iatasub']]
+    # print(ext_data.info())
+    return ext_data
+    
+    
+

@@ -86,7 +86,6 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-02-20 06:26:18'
 uuid: gcs_to_bq_pipeline
 variables_dir: /home/src/mage_data/flights_pipeline
 widgets: []

@@ -2,8 +2,6 @@
 import pandas as pd
 import requests
 import re
-import time
-start = time.time()
 if 'data_loader' not in globals():
     from mage_ai.data_preparation.decorators import data_loader
 if 'test' not in globals():
@@ -56,31 +54,6 @@ def load_data_from_api(*args, **kwargs):
 
     
     flight_df = pd.concat(acq_data(flight_url))
-    # Drop all empty columns here
-    # flight_df.dropna(how='all', axis=1, inplace=True)
-    
-    #Drop irrelevant columns
-    # flight_df.drop(
-    #     [
-    #     'aircraftRegistration', 
-    #     'expectedSecurityFilter', 
-    #     'flightNumber',
-    #     'mainFlight',
-    #     'prefixIATA',
-    #     'prefixICAO', 
-    #     'airlineCode',
-    #     'schemaVersion',
-    #     'aircraftType.iataMain',
-    #     'aircraftType.iataSub',
-    #     'codeshares.codeshares',
-    #     'route.eu',
-    #     'route.visa',
-    #     'checkinAllocations.checkinAllocations'
-
-    # ], axis=1,inplace=True)
-    
-    # Drop all incomplete rows here
-    # flight_df.dropna(inplace=True)
 
     
     #Update Dtypes
@@ -91,26 +64,7 @@ def load_data_from_api(*args, **kwargs):
     flight_df['expectedTimeGateOpen'] = pd.to_datetime(flight_df['expectedTimeGateOpen'])
     flight_df['scheduleDateTime'] = pd.to_datetime(flight_df['scheduleDateTime'])
 
-    # print(flight_df.head())
-    print(flight_df.info())
-    
-    end = time.time()
-    print(end - start)
+    # end = time.time()
+    # print(end - start)
     return flight_df
  
-
-
- ###############################################
- #REFER ME.
- #for future suleman, need to consider rows with complete data and perform aggreagations 
- #(like which airline comes in the most, where does most fly to from schipol, average boarding time categorized by airlines and much more)
- 
-
-
-
-# @test
-# def test_output(output, *args) -> None:
-#     """
-#     Template code for testing the output of the block.
-#     """
-#     assert output is not None, 'The output is undefined'
