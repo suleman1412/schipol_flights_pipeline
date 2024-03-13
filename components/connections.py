@@ -195,6 +195,6 @@ def my_links():
     github_logo = "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
     github_link = "https://github.com/suleman1412"
     image_size = 60
-    linkedin_logo = "https://png2.cleanpng.com/sh/adbbe142ae9bdf273c4d7f1744c321ef/L0KzQYm3VcE5N6FBipH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6TfxqdpxqfNt3LUXkdre3Usg0bWY5Uag9LkG6QIW5Usc5OWY3TqgBMUe5Q4q6WcIveJ9s/kisspng-computer-icons-linkedin-5aff0283e54964.1704227815266617639392.png"
+    linkedin_logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
     linkedin_url = "https://www.linkedin.com/in/sulemankarigar/"
     return st.markdown(f'<a href="{github_link}"><img src="{github_logo}" alt="Github" width="{image_size}px"> <a href="{linkedin_url}"><img src="{linkedin_logo}" alt="LinkedIn" width="{image_size}px">', unsafe_allow_html=True)
